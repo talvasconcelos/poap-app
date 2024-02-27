@@ -75,7 +75,7 @@ async function onDetect(result) {
     badge.value = {}
     loadingPoap.value = true
     let naddr = result[0].rawValue.replace('nostr://', '')
-    let badgeData = await getBadge(/*badge.value*/ naddr)
+    let badgeData = await getBadge(naddr)
     if (
       $nostr.events
         .filter(ev => ev.kind == 30009)
@@ -121,13 +121,6 @@ async function claimBadge() {
     )
     console.log(content, finalizeEvent(event, $account.privkey))
     await publishToRelays(finalizeEvent(event, $account.privkey))
-
-    // event.id = NostrTools.getEventHash(event);
-    // event.sig = await NostrTools.signEvent(event, this.account.privkey);
-
-    // await this._sendDmEvent(event);
-    // event.content = dm.message;
-    // this._persistDMEvent(event, dm.to);
   } catch (error) {
     $q.notify({
       type: 'warning',
