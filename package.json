@@ -1,7 +1,7 @@
 {
   "name": "poap-client-app",
   "version": "0.0.1",
-  "description": "A Quasar Project",
+  "description": "Poap on Nostr",
   "productName": "POAP App",
   "author": "Tiago Vasconcelos <talvasconcelos@gmail.com>",
   "private": true,
