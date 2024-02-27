@@ -1,0 +1,41 @@
+// app global css in SCSS form
+.container,
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.container {
+  @media (min-width: $breakpoint-sm-min) {
+    max-width: 700px;
+  }
+  @media (min-width: $breakpoint-md-min) {
+    max-width: 950px;
+  }
+  @media (min-width: $breakpoint-lg-min) {
+    max-width: 1200px;
+  }
+  @media (min-width: $breakpoint-xl-min) {
+    max-width: 1450px;
+  }
+}
+
+.padded {
+  padding: 2rem 0;
+
+  @media (min-width: $breakpoint-sm-min) {
+    padding: 4rem 0;
+  }
+  @media (min-width: $breakpoint-md-min) {
+    padding: 4rem 0;
+  }
+  @media (min-width: $breakpoint-lg-min) {
+    padding: 6rem 0;
+  }
+  @media (min-width: $breakpoint-xl-min) {
+    padding: 8rem 0;
+  }
+}
